@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class EmployeeServiceImpl  implements  EmployeeService{
     @Autowired
     private EmployeeRepository employeeRepository;
+    @Autowired
     private AddressRepository addressRepo;
     private
 
