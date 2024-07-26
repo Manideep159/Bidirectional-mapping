@@ -14,8 +14,18 @@ public class EmployeeController {
 
     @PostMapping("/create")
     public Employee saveEmployee(@RequestBody Employee employee){
+
         return service.saveEmployee(employee);
     }
+
+    @PostMapping("/employeelist")
+    public List<Employee> createAll (@RequestBody List<Employee> employees ){
+        return service.saveAllEmployee(employees);
+    }
+
+
+
+
 
     @GetMapping("/address/{city}")
     public Address findByCity(@PathVariable String city){
