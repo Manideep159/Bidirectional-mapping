@@ -11,5 +11,7 @@ public class Address {
     private  int houseNo;
     private String street;
     private String city;
+    private String address;
+
 
 }

@@ -13,15 +13,22 @@ public class EmployeeServiceImpl  implements  EmployeeService{
     @Autowired
     private EmployeeRepository employeeRepository;
     private AddressRepository addressRepo;
+    private
 
     @Override
     public Employee saveEmployee(Employee employee){
-      return   employeeRepository.save(employee);
+
+        return   employeeRepository.save(employee);
     }
 
     @Override
     public Address getByCity(String city) {
+
         return addressRepo.findByCity(city);
+    }
+
+    public List<Employee> saveAllEmployee(List<Employee> employees){
+        return employeeRepository.saveAll(employees);
     }
 
 //    @Override
